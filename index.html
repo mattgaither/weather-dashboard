@@ -29,17 +29,70 @@
             <div class="col-sm-4 bg-light">
                 <h3><strong>Search for a City:</strong></h3>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="city" aria-labelledby="City Search" aria-describedby="search-button" placeholder="Find a City">
-                    <button class="input-group-append btn bg-primary text-light" id="search-button"><i class="fa-solid fa-magnifying-glass-location"></i></button>
+                    <input type="text" class="form-control" id="city" aria-labelledby="City Search"
+                        aria-describedby="search-button" placeholder="Find a City">
+                    <button class="input-group-append btn bg-primary text-light" id="search-button"><i
+                            class="fa-solid fa-magnifying-glass-location"></i></button>
                 </div>
                 <div>
-                    <button class="btn-primary btn m-5" type="reset" id="clear"><i class="fa-solid fa-square-xmark"></i> Clear Cities</button>
+                    <button class="btn-primary btn mt-5" type="reset" id="clear"><i class="fa-solid fa-square-xmark"></i>
+                        Clear Cities</button>
+                </div>
+                <ul class="list-group">
+                </ul>
+            </div>
+            <div class="col-sm-8">
+                <div class="row border border-dark rounded ml-2">
+                    <div class="col-sm-12" id="current-weather">
+                        <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                        <p>Temperature <span class="current" id="temperature"></span></p>
+                        <p>Humidity<span class="current" id="humidity"></span></p>
+                        <p>Wind Speed<span class="current" id="wind-speed"></span></p>
+                        <p>UV Index<span class="current bg-danger rounded py-2 px-2 text-white" id="uv-index"></span></p>
+                    </div>
+                </div>
+
+                <div class="col-sm-12" id ="future-weather">
+                    <h3>5-Day Forecast:</h3>
+                    <div class="row text-light">
+                        <div class="col-sm-2 bg-primary forecast text-white rounded" >
+                            <p id="forDate0"></p>
+                            <p id="forImg0"></p>
+                            <p>Temp:<span id="forTemp0"></span></p>
+                            <p>Humidity:<span id="forHumidity0"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white rounded" >
+                            <p id="forDate1"></p>
+                            <p id="forImg1"></p>
+                            <p>Temp:<span id="forTemp1"></span></p>
+                            <p>Humidity:<span id="forHumidity1"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white rounded">
+                            <p id="forDate2"></p>
+                            <p id="forImg2"></p>
+                            <p>Temp:<span id="forTemp2"></span></p>
+                            <p>Humidity:<span id="forHumidity2"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white rounded">
+                            <p id="forDate3"></p>
+                            <p id="forImg3"></p>
+                            <p>Temp:<span id="forTemp3"></span></p>
+                            <p>Humidity:<span id="forHumidity3"></span></p>
+                        </div>
+                        <div class="col-sm-2 bg-primary forecast text-white rounded" >
+                            <p id="forDate4"></p>
+                            <p id="forImg4"></p>
+                            <p>Temp:<span id="forTemp4"></span></p>
+                            <p>Humidity:<span id="forHumidity4"></span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 
-        
+
 </body>
 
 </html>
