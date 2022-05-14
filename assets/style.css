@@ -1,4 +1,16 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-size: 1.2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .jumbotron{
     background-color: orange;
+}
+
+h3{
+    font-weight: bold;
 }
