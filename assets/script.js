@@ -32,7 +32,7 @@ function displayWeather(event){
 
 function currentWeather(city){
     //here I built the ULR so i can get the data from the server
-    var queryURL = "htpps://api.openweathermap.org/data/2.5/forecast?q" + city + "&appid=" + APIkey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIkey;
     $.ajax({
         url:queryURL,
         method:"GET"
@@ -41,8 +41,8 @@ function currentWeather(city){
         // Parse the response to displat the current weather including the City name, the date, and the weather icons.
         console.log(response);
         
-        var iconcode = response.weather[0].icon;
-        var iconurl = "http://openweathermap.org/img/w/" + iconcode + "@2x.png";
+        var iconcode = response.list[0].weather[0].icon;
+        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
         // $('#wicon').attr('src', iconurl);
 
         var date = new Date(response.dt*1000).toLocaleDateString();
@@ -50,10 +50,10 @@ function currentWeather(city){
         $(currentCity).html(response.name + "(" + date + ")" + "<img src=" + iconurl + ">");
 
 
-        var tempF = (response.main.temp -273.15) * 1.80 + 32;
+        var tempF = (response.list[0].main.temp -273.15) * 1.80 + 32;
         $(currentTemperature).html((tempF).toFixed(2) + "&#8457");
 
-        $(currenthummidty).html(response.main.humidity+"%");
+        $(currenthummidty).html(response.list[0].main.humidity+"%");
 
         var ws = response.wind.speed;
         var windSMPH = (ws*2.237).toFixed(1);
