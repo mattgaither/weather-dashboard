@@ -53,7 +53,7 @@ function currentWeather(city){
         var tempF = (response.list[0].main.temp -273.15) * 1.80 + 32;
         $(currentTemperature).html((tempF).toFixed(2) + "&#8457");
 
-        $(currenthummidty).html(response.list[0].main.humidity+"%");
+        //$(currenthummidty).html(response.list[0].main.humidity+"%");
 
         var ws = response.wind.speed;
         var windSMPH = (ws*2.237).toFixed(1);
